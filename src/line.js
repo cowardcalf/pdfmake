@@ -6,13 +6,15 @@
  * @constructor
  * @this {Line}
  * @param {Number} Maximum width this line can have
+ * @param {object} absolutePosition
  */
-function Line(maxWidth) {
+function Line(maxWidth, absolutePosition) {
 	this.maxWidth = maxWidth;
 	this.leadingCut = 0;
 	this.trailingCut = 0;
 	this.inlineWidths = 0;
-	this.inlines = [];
+  this.inlines = [];
+  this.absolutePosition = absolutePosition;
 }
 
 Line.prototype.getAscenderHeight = function () {

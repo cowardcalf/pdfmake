@@ -712,7 +712,7 @@ LayoutBuilder.prototype.buildNextLine = function (textNode) {
 		return null;
 	}
 
-	var line = new Line(this.writer.context().availableWidth);
+	var line = new Line(this.writer.context().availableWidth, textNode.absolutePosition);
 	var textTools = new TextTools(null);
 
 	var isForceContinue = false;

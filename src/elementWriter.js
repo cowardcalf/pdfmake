@@ -30,8 +30,8 @@ ElementWriter.prototype.addLine = function (line, dontUpdateContextPosition, ind
 	var page = context.getCurrentPage(),
 		position = this.getCurrentPositionOnPage();
 
-	if (context.availableHeight < height || !page) {
-		return false;
+  if ((line.absolutePosition === undefined && context.availableHeight < height) || !page) {
+      return false;
 	}
 
 	line.x = context.x + (line.x || 0);
